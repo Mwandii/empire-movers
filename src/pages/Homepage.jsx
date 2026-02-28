@@ -22,7 +22,6 @@ export default function HomePage() {
       <main>
         <Hero />
         <Services />
-        <HowItWorks />
         <Pricing />
         <WhyEmpire />
         <Team />

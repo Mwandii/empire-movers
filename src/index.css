@@ -1,1 +1,201 @@
 @import "tailwindcss";
+
+/* ─────────────────────────────────────────────────────
+   Design tokens — replaces tailwind.config.js in v4
+   All custom values defined here via @theme
+───────────────────────────────────────────────────── */
+@theme {
+  /* Colors */
+  --color-navy:         #0f172a;
+  --color-navy-deep:    #020617;
+  --color-orange:       #f97316;
+  --color-orange-light: #fb923c;
+  --color-slate:        #f8fafc;
+  --color-muted:        #64748b;
+  --color-border:       #e2e8f0;
+
+  /* Fonts */
+  --font-display: "Barlow Condensed", sans-serif;
+  --font-body:    "DM Sans", sans-serif;
+
+  /* Max widths */
+  --width-content: 1280px;
+}
+
+/* ─────────────────────────────────────────────────────
+   Base styles
+───────────────────────────────────────────────────── */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-body);
+    color: var(--color-navy);
+    background: var(--color-slate);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  button, input, select, textarea {
+    font-family: var(--font-body);
+  }
+}
+
+/* ─────────────────────────────────────────────────────
+   Component classes
+───────────────────────────────────────────────────── */
+@layer components {
+
+  /* Section wrapper */
+  .section-container {
+    max-width: var(--width-content);
+    margin-inline: auto;
+    padding-inline: 1.5rem;
+  }
+
+  @media (min-width: 1024px) {
+    .section-container {
+      padding-inline: 4rem;
+    }
+  }
+
+  /* Overline label */
+  .overline {
+    font-size: 0.625rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--color-orange);
+  }
+
+  /* Section headings */
+  .section-heading {
+    font-family: var(--font-display);
+    font-weight: 900;
+    text-transform: uppercase;
+    color: var(--color-navy);
+    line-height: 1;
+    font-size: clamp(2rem, 4vw, 3.25rem);
+  }
+
+  .section-heading-white {
+    font-family: var(--font-display);
+    font-weight: 900;
+    text-transform: uppercase;
+    color: white;
+    line-height: 1;
+    font-size: clamp(2rem, 4vw, 3.25rem);
+  }
+
+  /* Buttons */
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--color-orange);
+    color: white;
+    padding: 1rem 2.5rem;
+    font-size: 0.6875rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: background-color 0.3s;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  .btn-primary:hover {
+    background: var(--color-orange-light);
+  }
+
+  .btn-primary:focus-visible {
+    outline: 2px solid var(--color-orange);
+    outline-offset: 2px;
+  }
+
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.7);
+    padding: 1rem 2.5rem;
+    font-size: 0.6875rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: border-color 0.3s, color 0.3s;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  .btn-secondary:hover {
+    border-color: rgba(255, 255, 255, 0.5);
+    color: white;
+  }
+
+  .btn-outline-dark {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: 1px solid var(--color-navy);
+    color: var(--color-navy);
+    padding: 1rem 2.5rem;
+    font-size: 0.6875rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: background-color 0.3s, color 0.3s;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  .btn-outline-dark:hover {
+    background: var(--color-navy);
+    color: white;
+  }
+
+  /* Form elements */
+  .form-input {
+    width: 100%;
+    background: white;
+    border: 1px solid var(--color-border);
+    padding: 0.75rem 1rem;
+    font-size: 0.875rem;
+    color: var(--color-navy);
+    outline: none;
+    transition: border-color 0.2s;
+  }
+
+  .form-input:focus {
+    border-color: var(--color-navy);
+  }
+
+  .form-input::placeholder {
+    color: color-mix(in srgb, var(--color-muted) 60%, transparent);
+  }
+
+  .form-label {
+    display: block;
+    font-size: 0.5625rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--color-muted);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* ─────────────────────────────────────────────────────
+   Utilities
+───────────────────────────────────────────────────── */
+@layer utilities {
+  .divider {
+    width: 2.5rem;
+    height: 2px;
+    background: var(--color-orange);
+  }
+}

@@ -43,12 +43,12 @@ export default function Coverage() {
                 <span
                   key={area}
                   role="listitem"
-                  className="border border-border bg-slate px-5 py-2.5 text-muted text-[0.6875rem] tracking-[0.1em] uppercase"
+                  className="border border-border bg-slate px-5 py-2.5 text-muted text-[0.6875rem] tracking-widest uppercase"
                 >
                   {area}
                 </span>
               ))}
-              <span className="border border-dashed border-orange px-5 py-2.5 text-orange text-[0.6875rem] tracking-[0.1em] uppercase">
+              <span className="border border-dashed border-orange px-5 py-2.5 text-orange text-[0.6875rem] tracking-widest uppercase">
                 + More on Request
               </span>
             </div>

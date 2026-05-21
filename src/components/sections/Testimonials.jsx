@@ -21,7 +21,7 @@ export default function Testimonials() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-0.5">
           {TESTIMONIALS.map((t, i) => (
             <FadeIn key={t.name} delay={i * 100} threshold={0.05}>
-              <article className="bg-white/[0.04] border border-white/[0.07] p-10 flex flex-col">
+              <article className="bg-white/4 border border-white/[0.07] p-10 flex flex-col">
                 {/* Large quote mark */}
                 <span
                   className="font-display text-orange text-7xl leading-[0.7] mb-6 opacity-40 select-none"
@@ -40,7 +40,7 @@ export default function Testimonials() {
                   <img
                     src={t.avatar}
                     alt={t.name}
-                    className="w-11 h-11 rounded-full object-cover flex-shrink-0"
+                    className="w-11 h-11 rounded-full object-cover shrink-0"
                     loading="lazy"
                   />
                   <div>

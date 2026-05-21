@@ -97,7 +97,7 @@ export default function Contact() {
                   { label: 'Based In', value: COMPANY.location, href: null                         },
                 ].map(({ label, value, href }) => (
                   <div key={label} className="flex items-center gap-4">
-                    <div className="w-11 h-11 bg-slate border border-border flex items-center justify-center flex-shrink-0">
+                    <div className="w-11 h-11 bg-slate border border-border flex items-center justify-center shrink-0">
                       <span className="w-2 h-2 bg-orange rounded-full" aria-hidden="true" />
                     </div>
                     <div>

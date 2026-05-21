@@ -20,7 +20,7 @@ export default function Hero() {
 
   return (
     <section
-      className="relative flex min-h-[95vh] overflow-hidden pt-16 lg:pt-[68px]"
+      className="relative flex min-h-[95vh] overflow-hidden pt-16 lg:pt-17"
       aria-label="Hero"
     >
       {/* ── Left panel — content ── */}
@@ -38,7 +38,7 @@ export default function Hero() {
           {/* Overline pill */}
           <FadeIn delay={100}>
             <div className="inline-flex items-center gap-2 border border-orange/30 px-4 py-1.5 mb-10">
-              <span className="w-1.5 h-1.5 rounded-full bg-orange flex-shrink-0" aria-hidden="true" />
+              <span className="w-1.5 h-1.5 rounded-full bg-orange shrink-0" aria-hidden="true" />
               <span className="text-orange text-[0.625rem] tracking-[0.35em] uppercase">
                 Nairobi&apos;s Trusted Movers
               </span>
@@ -59,7 +59,7 @@ export default function Hero() {
 
           {/* Subheading */}
           <FadeIn delay={300}>
-            <p className="text-white/45 text-base lg:text-[1.0625rem] leading-relaxed max-w-[420px] mb-11">
+            <p className="text-white/45 text-base lg:text-[1.0625rem] leading-relaxed max-w-105 mb-11">
               Professional house and office moving across Nairobi. Transparent pricing,
               careful handling, and a team that shows up on time — every time.
             </p>
@@ -116,7 +116,7 @@ export default function Hero() {
         />
 
         {/* Floating badge */}
-        <div className="absolute bottom-12 right-12 bg-orange p-5 max-w-[210px]">
+        <div className="absolute bottom-12 right-12 bg-orange p-5 max-w-52.5">
           <p className="font-display text-white text-[0.8125rem] tracking-[0.15em] uppercase mb-1">
             Serving Nairobi
           </p>

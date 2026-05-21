@@ -29,7 +29,7 @@ export default function Services() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0.5">
           {SERVICES.map((service, i) => (
             <FadeIn key={service.id} delay={i * 80} threshold={0.05}>
-              <article className="relative aspect-[3/4] overflow-hidden group">
+              <article className="relative aspect-3/4 overflow-hidden group">
                 <img
                   src={service.image}
                   alt={service.title}

@@ -8,7 +8,7 @@ const COLLAGE = [
     alt: 'Movers carefully carrying a sofa',
   },
   {
-    src: 'https://images.pexels.com/photos/7464414/pexels-photo-7464414.jpeg?auto=compress&cs=tinysrgb&w=600',
+    src: 'https://images.unsplash.com/photo-1600725935160-f67ee4f6084a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGFja2luZyUyMGJveGVzfGVufDB8fDB8fHww',
     alt: 'Professional packing of boxes',
   },
   {
@@ -29,7 +29,7 @@ export default function WhyEmpire() {
 
           {/* ── Image collage ── */}
           <FadeIn direction="right" threshold={0.08}>
-            <div className="grid grid-cols-2 gap-1 h-[480px] lg:h-[520px]">
+            <div className="grid grid-cols-2 gap-1 h-120 lg:h-130">
               {/* Tall left image */}
               <div className="overflow-hidden row-span-2">
                 <img
